@@ -31,8 +31,14 @@ class Navigation extends Component {
 
             cart.forEach(function(i) { count[i.size] = (count[i.size]||0) + 1;});
 
+            console.log(cart);
+            const uniqueCart = cart.filter((item, index, self) =>
+                index === self.findIndex((i) => (
+                    i.size === item.size && i.title === item.title
+                ))
+            )
 
-            return this.props.cart.map((item, index) => {
+            return uniqueCart.map((item, index) => {
                 return <div className="cart-item" key={index}>
                     <img src={item.image} alt={item.title} />
                     <div className="info">
