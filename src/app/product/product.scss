@@ -1,0 +1,82 @@
+@import '~bootstrap/scss/bootstrap-grid';
+@import '../variables';
+
+.product-image {
+  margin-bottom: 1.5rem;
+}
+
+.product-info {
+
+  h2 {
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: $font-dark;
+  }
+
+  strong {
+    display: block;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    margin: 1.25rem 0;
+    border-top: $header-bg 1px solid;
+    border-bottom: $header-bg 1px solid;
+    color: $font-dark;
+
+    @include media-breakpoint-down(xs) {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: $font-medium;
+  }
+
+
+  .size-wrapper {
+    margin-bottom: 1rem;
+
+    h5 {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: $font-medium;
+      margin-bottom: 0.4rem;
+
+      .required {
+        color: $font-alert;
+      }
+      .selected {
+        font-weight: bold;
+      }
+    }
+
+    .btn-size {
+      margin: 1px;
+      padding: 0.7rem;
+      min-width: 2.4rem;
+      text-align: center;
+      margin-right: 0.3rem;
+      font-size: 0.6rem;
+      font-weight: bold;
+      display: inline-block;
+      border: $brand-light-grey 1px solid;
+      color: $brand-light-grey;
+
+      &.selected {
+        border: $brand-dark-grey 2px solid;
+        color: $brand-dark-grey;
+      }
+    }
+  }
+
+  .btn-outline-dark {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-width: 2px;
+  }
+}
